@@ -4,7 +4,8 @@
 </head>
 <body>
   <p>Hello World!</p>
-  <button>press me!</button>
+  <button id="good">Press Me!</button>
+  <button id="bad">Don't Press Me!</button>
 
   <script>
     var x = 5;    // variable
@@ -25,7 +26,7 @@
     x = null            // Object (assignment value = no value)
 
     // Objects
-    var item = {name: "10pc Chicken Nuggets", price: "$1.99"};
+    var item = { name: "10pc Chicken Nuggets", location: "Burger King", price: "$1.99" };
     console.log(item.name);
     console.log(item.price);
     console.log(item);
@@ -53,16 +54,112 @@
         console.log("hi" + (i + 2));
     }
 
-    // Arrays
-    var arr
+    // Functions
+    function random(lo, hi) {
+      var random = Math.random() * (hi - lo + 1) + lo; // function scope
+      //var random = 5; // this is ok! (var can be reinitialized)
+      console.log(random);
+      if (random > (lo + hi) / 2) {
+        let random = Math.random() * (hi - lo + 1) + lo;  // block scope
+        //let random = 5;  // error (let CANNOT be reinitialized)
+        console.log(random);
+      }
+      console.log(random);
+    }
+    random(50, 100);
 
-    function output() {
+    // SPREAD SYNTAX
+    range = [50, 100];
+    random(...range);
+
+    // ARROW OPERATION
+    var random2 = (lo, hi) => console.log(Math.random() * (hi - lo + 1) + lo);
+    random2(50,100);
+
+    // Arrays
+    var arr = ["Apple", "Banana", 2, 5.4, true];
+    console.log(arr[0]);
+    // Iteration with for loop
+    for (var i = 0; i < arr.length; i++) {
+      console.log(arr[i]);
+    }
+    // Iteration with forEach
+    arr.forEach(elem => {
+      console.log(elem);
+    });
+
+    // Appending
+    const weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday"];
+    weekdays.push("Friday"); //["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+    console.log(weekdays);
+    const weekends = ["Saturday", "Sunday"];
+    const week_str = weekdays + weekends;
+    console.log(week_str); // String
+    const week_arr = weekdays.concat(weekends); // Array
+    console.log(week_arr);
+
+    // Spread Syntax
+    const week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", ...weekends];
+    console.log(week); //["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+    // Slicing
+    const arr2 = arr.slice(2, -1);  // arr[2] to arr[length - 2]; doesn't modify arr
+    console.log(arr);
+    console.log(arr2);
+
+    // Splicing
+    arr.splice(2, 1);               // Takes away 1 item starting from arr[2]
+    console.log(arr);               // ["Apple", "Banana", 5.4, true]
+    arr.splice(2, 0, "Chocolate");  // Takes away 0 items, adds "Chocolate"
+    console.log(arr);               // ["Apple", "Banana", "Chocolate", 5.4, true]
+    arr.splice(3, 2, "Durian")      // Takes away 2 items startring from arr[3], adds "Durian"
+    console.log(arr);               // ["Apple", "Banana", "Chocolate", "Durian"]
+
+    const items = [
+      { name: "10pc Chicken Nuggets", location: "Burger King", price: "$1.99" },
+      { name: "Whopper", location: "Burger King", price: "$4.19" },
+      { name: "Original Burger Meal Combo", location: "Harvey's", price: "$5.99" },
+      { name: "Chicken Burger Meal Combo", location: "Harvey's", price: "$7.99" }
+    ];
+
+    // filter
+    const bk = items.filter(item => item.location === "Burger King");
+    for (var i = 0; i < bk.length; i++) {
+      console.log(bk[i]);
+    }
+    // map
+    const menu = items.map(item => item.name + " @ " + item.price + ". Sold at " + item.location);
+    for (var i = 0; i < menu.length; i++) {
+      console.log(menu[i] );
+    }
+    //reduce
+    const totalCost = items.reduce((priceSoFar, item) => {
+      const item_price = parseFloat(item.price.slice(1));
+      priceSoFar += item_price;
+      return priceSoFar;
+    }, 0);
+    console.log(totalCost.toFixed(2));  //toFixed returns string to 2 decimal places
+
+    function output(e) {
+      console.log(e);
       for (var i = 0; i < 5; i++) {
-        document.write("<h1>asdasdsa</h1><p>asdasd<br  />asdsa</p>");
+        console.log("You have pressed the button!");
       }
     }
-    const button = document.querySelector('button');
-    button.addEventListener('click', output);
+    const buttons = document.querySelectorAll('button');
+    console.log(buttons);
+    const goodButton = document.querySelector('#good');
+    const badButton = document.querySelector('#bad');
+    console.log(goodButton);
+    goodButton.addEventListener('click', e => {
+      console.log(e);
+      alert("Hello World!");
+    });
+    badButton.addEventListener('click', output);
+
+    const text = document.querySelector('p');
+    document.addEventListener('click', e => text.innerHTML = "WHY DID YOU CLICK THE BUTTON!!!");
+    // innerHTML = sets the HTML content of an element
   </script>
 </body>
 </html>
