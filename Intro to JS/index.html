@@ -1,0 +1,68 @@
+<html>
+<head>
+  <title>Welcome to JavaScript!</title>
+</head>
+<body>
+  <p>Hello World!</p>
+  <button>press me!</button>
+
+  <script>
+    var x = 5;    // variable
+    const y = 6;  // constant
+    x += y; // x = 11
+    console.log(x, y);
+    //y += x; // error
+    x++; // x = 12
+    ++x; // x = 13
+    console.log(x, y);
+
+    // JavaScript is untyped (different from dynamic typing)
+    x = "Hello World";  // String
+    x = true;           // Boolean
+    x = 3               // Number (double-precision 64-bit; -(2^53 - 1) to 2^53 - 1)
+    x = 5.3             // Number
+    x = undefined       // Undefined (var has been declared but not assigned)
+    x = null            // Object (assignment value = no value)
+
+    // Objects
+    var item = {name: "10pc Chicken Nuggets", price: "$1.99"};
+    console.log(item.name);
+    console.log(item.price);
+    console.log(item);
+
+    // Conditionals
+    x = 0;
+
+    if (x > 0) console.log("Positive");
+    else if (x < 0) console.log("Negative");
+    else console.log("Zero");
+
+    // Strict Equality Operator (===) vs Lenient Quality Operator (==)
+    // Strict = compares values of same type
+    // Lenient = convert values of dfferent types before comparing
+    //         = conversion rules are confusing
+    //         = STAY AWAY FROM LENIENT TYPING
+    console.log(0 == false);  // true
+    console.log(0 === false); // false
+    console.log(1 == true);  // true
+    console.log(1 === true); // false
+
+    // for loop
+    for (var i = 0; i < 5; i++) {
+      console.log("hi" + i + 2);
+        console.log("hi" + (i + 2));
+    }
+
+    // Arrays
+    var arr
+
+    function output() {
+      for (var i = 0; i < 5; i++) {
+        document.write("<h1>asdasdsa</h1><p>asdasd<br  />asdsa</p>");
+      }
+    }
+    const button = document.querySelector('button');
+    button.addEventListener('click', output);
+  </script>
+</body>
+</html>
