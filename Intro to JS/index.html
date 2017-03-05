@@ -48,13 +48,7 @@
     console.log(1 == true);  // true
     console.log(1 === true); // false
 
-    // for loop
-    for (var i = 0; i < 5; i++) {
-      console.log("hi" + i + 2);
-        console.log("hi" + (i + 2));
-    }
-
-    // Functions
+    // FUNCTIONS
     function random(lo, hi) {
       var random = Math.random() * (hi - lo + 1) + lo; // function scope
       //var random = 5; // this is ok! (var can be reinitialized)
@@ -66,19 +60,22 @@
       }
       console.log(random);
     }
+
     random(50, 100);
 
-    // SPREAD SYNTAX
+    // Spread Syntax
     range = [50, 100];
     random(...range);
 
-    // ARROW OPERATION
+    // Arrow Operation
     var random2 = (lo, hi) => console.log(Math.random() * (hi - lo + 1) + lo);
     random2(50,100);
 
-    // Arrays
+
+    // ARRAYS
     var arr = ["Apple", "Banana", 2, 5.4, true];
     console.log(arr[0]);
+
     // Iteration with for loop
     for (var i = 0; i < arr.length; i++) {
       console.log(arr[i]);
@@ -102,18 +99,18 @@
     const week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", ...weekends];
     console.log(week); //["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
-    // Slicing
+    // Slicing (taking a subarray from an array)
     const arr2 = arr.slice(2, -1);  // arr[2] to arr[length - 2]; doesn't modify arr
     console.log(arr);
     console.log(arr2);
 
-    // Splicing
+    // Splicing (Removing elements and adding elements to arr)
     arr.splice(2, 1);               // Takes away 1 item starting from arr[2]
     console.log(arr);               // ["Apple", "Banana", 5.4, true]
     arr.splice(2, 0, "Chocolate");  // Takes away 0 items, adds "Chocolate"
     console.log(arr);               // ["Apple", "Banana", "Chocolate", 5.4, true]
-    arr.splice(3, 2, "Durian")      // Takes away 2 items startring from arr[3], adds "Durian"
-    console.log(arr);               // ["Apple", "Banana", "Chocolate", "Durian"]
+    arr.splice(3, 2, "Durian", "Eggplant") // Takes away 2 items startring from arr[3], adds "Durian" and "Eggplant"
+    console.log(arr);               // ["Apple", "Banana", "Chocolate", "Durian", "Eggplant"]
 
     const items = [
       { name: "10pc Chicken Nuggets", location: "Burger King", price: "$1.99" },
@@ -140,6 +137,8 @@
     }, 0);
     console.log(totalCost.toFixed(2));  //toFixed returns string to 2 decimal places
 
+
+    // INTERACTING WITH THE DOM (DOCUMENT OBJECT MODEL)
     function output(e) {
       console.log(e);
       for (var i = 0; i < 5; i++) {
