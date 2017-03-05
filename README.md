@@ -16,7 +16,9 @@ Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js 
 ## Here's How I Plan to Run The Workshop Trilogy
 ### Workshop #1: JavaScript Basics
 Time: Tues, March 7 @ 7pm - 8.30pm (1.5hr)
+
 Location: TBA
+
 Goals:
 - Introduce JavaScript
 - Basic operations (for loops, arrays, etc.)
@@ -31,7 +33,9 @@ Goals:
 
 ### Workshop #2: Intro to node.js
 Time: Tues, March 14 @  7 - 8.30pm (1.5hr)
+
 Location: TBA
+
 Goals:
 - Introduce node.js (asynchronous, single-threaded)
 - Introduce concept of callbacks and error handling
@@ -39,7 +43,9 @@ Goals:
 
 ### Workshop #3: Setting up a Server with Express.js
 Time: Tues, March 21 @  7pm - 8.30pm (1.5hr)
+
 Location: TBA
+
 Goals:
 - Integrate express to setup a local server
 - Introduce routing
