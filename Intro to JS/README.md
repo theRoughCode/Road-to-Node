@@ -1,5 +1,8 @@
 # Intro to JavaScript <img src="https://www.sololearn.com/Icons/Courses/1024.png" width="100px" height="100px">
 
+## What is JavaScript?
+An object-oriented programming language that is used to make websites interactive.  It allows you to dynamically update content, control multimedia, produce animations, and much more!  It interacts with the HTML elements through the DOM (Document Object Model) API and can be accessed through *document* or *window*. Check out this [link](https://developer.mozilla.org/en-US/docs/Web/API/document) for some of the document properties!
+
 ## What You Need to Have
 1. Text Editor (If you already have a preferred Text Editor, ignore the following subpoints)
     - [Atom.io] (https://atom.io/)
