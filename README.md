@@ -34,7 +34,7 @@ Goals:
 ### Workshop #2: Intro to node.js
 Time: Tues, March 14 @  7 - 8.30pm (1.5hr)
 
-Location: TBA
+Location: MC 4020
 
 Goals:
 - Introduce node.js (asynchronous, single-threaded)
@@ -44,7 +44,7 @@ Goals:
 ### Workshop #3: Setting up a Server with Express.js
 Time: Tues, March 21 @  7pm - 8.30pm (1.5hr)
 
-Location: TBA
+Location: STC 0020
 
 Goals:
 - Integrate express to setup a local server
