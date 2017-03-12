@@ -3,14 +3,14 @@
 ## What You Need to Have
 1. **Install Node.js** [here] (https://nodejs.org/en/)
     - To check if you have it installed:
-      - Open CLI (Command Line Interface)
+      1. Open CLI (Command Line Interface)
         - Windows:
           - Open the **Run** window (Win + R) 
           - Type "cmd"
         - Mac:
           - Open **Applications** -> **Utilities** -> **Terminal**
-      - Type ```node -v``` and hit **Enter**
-      - You should get the version number (i.e. ```v6.10.0```)
+      2. Type ```node -v``` and hit **Enter**
+      3. If successful, you should get the version number (i.e. ```v6.10.0```)
 2. Text Editor (If you already have a preferred Text Editor, ignore the following subpoints)
     - [Atom.io] (https://atom.io/)
     - Install helpful packages: 
