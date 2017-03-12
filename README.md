@@ -17,7 +17,7 @@ Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js 
 ### Workshop #1: JavaScript Basics
 Time: Tues, March 7 @ 7pm - 8.30pm (1.5hr)
 
-Location: TBA
+Location: STC 0020
 
 Goals:
 - Introduce JavaScript
