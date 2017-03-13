@@ -1,5 +1,7 @@
 # Intro to Node.js <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2000px-Node.js_logo.svg.png" width="100px">
 
+Check out the slides [HERE](https://docs.google.com/presentation/d/1Bw8MzgL1UnqebmQ9Hy5XYqr5wSJ5RXIqkKkRRKcsMwA/edit?usp=sharing)!!
+
 ## What You Need to Have
 1. **Install Node.js** [here] (https://nodejs.org/en/)
     - To check if you have it installed:
