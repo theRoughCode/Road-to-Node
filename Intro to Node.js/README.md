@@ -20,9 +20,10 @@
 3. [Google Chrome](https://www.google.ca/chrome/browser/desktop/index.html) (If you don't have Chrome, what are you doing with your life?  Jks, but basically any web browser with a console, so Firefox works too!)
 
 Goals:
+ - Introduce concept of callbacks and error handling + review JS
  - Introduce node.js (asynchronous, single-threaded)
- - Dependencies (package.json, --save)
+ - Demo with readfile (async) and readfilesync (sync)
+ - Introduce Promises
  - Create server with http
- - Module exports
- - Introduce concept of callbacks and error handling
- - Introduce Promises (maybe?)
+ - Dependencies (package.json, --save)
+ - .gitignore	
