@@ -1,11 +1,15 @@
 {
   "name": "intro-to-node",
   "version": "1.0.0",
-  "description": "1. **Install Node.js** [here] (https://nodejs.org/en/)\r     - To check if you have it installed:\r       1. Open CLI (Command Line Interface)\r         - Windows:\r           - Open the **Run** window (Win + R) \r           - Type \"cmd\"\r         - Mac:\r           - Open **Applications** -> **Utilities** -> **Terminal**\r       2. Type ```node -v``` and hit **Enter**\r       3. If successful, you should get the version number (i.e. ```v6.10.0```)\r 2. Text Editor (If you already have a preferred Text Editor, ignore the following subpoints)\r     - [Atom.io] (https://atom.io/)\r     - Install helpful packages: \r       - [autoclose-html] (https://atom.io/packages/autoclose-html) - autocloses HTML tags\r       - [javascript-snippets] (https://atom.io/packages/javascript-snippets) - shortcuts for JS functions\r     - [HOW DO I INSTALL ATOM PACKAGES???] (http://flight-manual.atom.io/using-atom/sections/atom-packages/)\r 3. [Google Chrome](https://www.google.ca/chrome/browser/desktop/index.html) (If you don't have Chrome, what are you doing with your life?  Jks, but basically any web browser with a console, so Firefox works too!)",
-  "main": "server.js",
+  "description": "Check out the slides [HERE](https://docs.google.com/presentation/d/1Bw8MzgL1UnqebmQ9Hy5XYqr5wSJ5RXIqkKkRRKcsMwA/edit?usp=sharing)!!",
+  "main": "server2.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cool-ascii-faces": "^1.3.4"
+  }
 }
