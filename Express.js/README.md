@@ -1,7 +1,7 @@
-# Intro to Node.js
+# Setting up a Server with Express.js
 
 ## What You Need to Have
-1. **Install Node.js** [here] (https://nodejs.org/en/)
+1. Install Node.js [here] (https://nodejs.org/en/)
     - To check if you have it installed:
       1. Open CLI (Command Line Interface)
         - Windows:
@@ -11,6 +11,7 @@
           - Open **Applications** -> **Utilities** -> **Terminal**
       2. Type ```node -v``` and hit **Enter**
       3. If successful, you should get the version number (i.e. ```v6.10.0```)
+2. Install Postman [here] (https://www.getpostman.com/)
 2. Text Editor (If you already have a preferred Text Editor, ignore the following subpoints)
     - [Atom.io] (https://atom.io/)
     - Install helpful packages: 
@@ -21,8 +22,11 @@
 
 Goals
  - Integrate express to setup a local server
+ - Introduce Nodemon
  - Introduce routing
- - Introduce localhost
+ - Introduce HTTP requests (POST, GET)
  - Create a basic HTML template with Handlebars
  - Show how node connects express and Handlebars (through view engine)
- - Introduce HTTP requests (POST, GET) with Postmaster
+ - GET/POST params 
+ - Introduce Postmaster
+
