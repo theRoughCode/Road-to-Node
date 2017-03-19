@@ -4,5 +4,26 @@
   </head>
   <body>
     <h1>{{ header }}</h1>
+    <!-- Form -->
+    {{#if is_form}}
+      <form action="/users" method="post">
+        <div>
+            {{#each field}}
+              <label for="{{ this }}">{{ this }}: </label>
+              <input type="text" id="{{ this }}" name="{{ this }}"></input>
+              <br  />
+            {{/each}}
+        </div>
+        <input type="submit" value="Submit"></input>
+      </form>
+    {{else}}
+    <!-- User submitted info -->
+      {{#if name}}
+        <h2>Name: {{ name }}</h2>
+      {{/if}}
+      {{#if id}}
+        <h2>ID: {{ id }}</h2>
+      {{/if}}
+    {{/if}}
   </body>
 </html>

@@ -5,26 +5,32 @@ const bodyParser = require('body-parser');
 // Define routes
 routes.get('/', (req, res) => res.render('index', {
   title: "Road to Node",
-  header: "Welcome to Express.js!"
+  header: "Welcome to Express.js!",
+  is_form: true,
+  field: ["name", "id", "username"]
 }));
 
 // req.params
-// http://localhost:8080/users/road2node
-routes.get('/users/:id', (req, res) => {
-  var id = req.params.id;
+// http://localhost:8080/users/road2node/191
+routes.get('/users/:username/:id', (req, res) => {
+  var username  = req.params.username,
+      id        = req.params.id;
   res.render('index', {
     title: "Users",
-    header: `ID = ${id}`
+    header: `Hi there, ${username}!`,
+    id: id
   });
 });
 
 // req.query
-// http://localhost:8080/users?name=raph+koh
+// http://localhost:8080/users?username=road2node&name=raph+koh
 routes.get('/users', (req, res) => {
+  var username = req.query.username;
   var name = req.query.name;
   res.render('index', {
     title: "Users",
-    header: `Name = ${name}`
+    header: `Welcome ${username}!`,
+    name: name
   });
 });
 
@@ -34,12 +40,15 @@ routes.use(bodyParser.urlencoded({ extended: true }));
 // req.body
 // Use Postman
 routes.post('/users', (req, res) => {
-  var name  = req.body.name,
-      id    = req.body.id;
+  var username  = req.body.username,
+      name      = req.body.name,
+      id        = req.body.id;
   console.log(`Name: ${name}, ID: ${id}`);
   res.render('index', {
     title: "Users",
-    header: `Name = ${name}<br />ID = ${id}`
+    header: `Hello ${username}!`,
+    name: name,
+    id: id
   });
 });
 
