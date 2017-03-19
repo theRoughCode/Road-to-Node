@@ -1,5 +1,5 @@
 # Setting up a Server with Express.js
-
+Slides can be viewed [here] (https://docs.google.com/presentation/d/19r2mQKPq08t45Ru6YWp4VE7NO4jPFDx2psoxDo-XNiY/edit?usp=sharing)
 ## What You Need to Have
 1. Install Node.js [here] (https://nodejs.org/en/)
     - To check if you have it installed:
