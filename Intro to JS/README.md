@@ -5,11 +5,11 @@ An object-oriented programming language that is used to make websites interactiv
 
 ## What You Need to Have
 1. Text Editor (If you already have a preferred Text Editor, ignore the following subpoints)
-    - [Atom.io] (https://atom.io/)
+    - [Atom.io](https://atom.io/)
     - Install helpful packages: 
-      - [autoclose-html] (https://atom.io/packages/autoclose-html) - autocloses HTML tags
-      - [javascript-snippets] (https://atom.io/packages/javascript-snippets) - shortcuts for JS functions
-    - [HOW DO I INSTALL ATOM PACKAGES???] (http://flight-manual.atom.io/using-atom/sections/atom-packages/)
+      - [autoclose-html](https://atom.io/packages/autoclose-html) - autocloses HTML tags
+      - [javascript-snippets](https://atom.io/packages/javascript-snippets) - shortcuts for JS functions
+    - [HOW DO I INSTALL ATOM PACKAGES???](http://flight-manual.atom.io/using-atom/sections/atom-packages/)
 2. [Google Chrome](https://www.google.ca/chrome/browser/desktop/index.html) (If you don't have Chrome, what are you doing with your life?  Jks, but basically any web browser with a console, so Firefox works too!)
 
 Goals:
