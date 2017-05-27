@@ -1,0 +1,172 @@
+<html>
+  <head>
+    <title>Welcome to JavaScript!</title>
+  </head>
+  <body>
+    <p>Hello World!</p>
+    <button id="good">Press Me!</button>
+    <button id="bad">Don't Press Me!</button>
+    <form>
+      <label for="hi">Upper bound: </label>
+      <input type="text" id="hi" value="0" /><br />
+      <label for="lo">Lower bound: </label>
+      <input type="text" id="lo" value="0" /><br />
+      <input type="submit" id="submit-btn" />
+    </form>
+    <h1>Number: </h1>
+    <h2 id="num"></h2>
+
+    <script>
+      var x = 5;    // variable
+      const y = 6;  // constant
+      x += y; // x = 11
+      console.log(x, y);
+      //y += x; // error
+      x++; // x = 12
+      ++x; // x = 13
+      console.log(x, y);
+
+      // JavaScript is untyped (does not enforce typing)
+      x = "Hello World";  // String
+      x = true;           // Boolean
+      x = 3               // Number (double-precision 64-bit; -(2^53 - 1) to 2^53 - 1)
+      x = 5.3             // Number
+      x = undefined       // Undefined (var has been declared but not assigned)
+      x = null            // Object (assignment value = no value)
+
+      // Objects
+      var item = { name: "10pc Chicken Nuggets", location: "Burger King", price: "$1.99" };
+      console.log(item.name);
+      console.log(item.price);
+      console.log(item);
+
+      // Conditionals
+      x = 0;
+
+      if (x > 0) console.log("Positive");
+      else if (x < 0) console.log("Negative");
+      else console.log("Zero");
+
+      // Strict Equality Operator (===) vs Lenient Quality Operator (==)
+      // Strict = compares values of same type
+      // Lenient = convert values of dfferent types before comparing
+      //         = conversion rules are confusing
+      //         = STAY AWAY FROM LENIENT TYPING
+      console.log(0 == false);  // true
+      console.log(0 === false); // false
+      console.log(1 == true);  // true
+      console.log(1 === true); // false
+
+      // FUNCTIONS
+      function random(lo, hi) {
+        return Math.floor(Math.random() * (hi - lo) + lo);
+      }
+
+      random(50, 100);
+
+      // Spread Syntax
+      range = [50, 100];
+      random(...range);
+
+      // Arrow Operation
+      var random2 = (lo, hi) => console.log(Math.random() * (hi - lo + 1) + lo);
+      random2(50,100);
+
+
+      // ARRAYS
+      var arr = ["Apple", "Banana", 2, 5.4, true];
+      console.log(arr[0]);
+
+      // Iteration with for loop
+      for (var i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+      }
+      // Iteration with forEach
+      arr.forEach(elem => {
+        console.log(elem);
+      });
+
+      // Appending
+      const weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday"];
+      weekdays.push("Friday"); //["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+      console.log(weekdays);
+      const weekends = ["Saturday", "Sunday"];
+      const week_str = weekdays + weekends;
+      console.log(week_str); // String
+      const week_arr = weekdays.concat(weekends); // Array
+      console.log(week_arr);
+
+      // Spread Syntax
+      const week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", ...weekends];
+      console.log(week); //["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+      // Slicing (taking a subarray from an array)
+      const arr2 = arr.slice(2, -1);  // arr[2] to arr[length - 2]; doesn't modify arr
+      console.log(arr);
+      console.log(arr2);
+
+      // Splicing (Removing elements and adding elements to arr)
+      arr.splice(2, 1);               // Takes away 1 item starting from arr[2]
+      console.log(arr);               // ["Apple", "Banana", 5.4, true]
+      arr.splice(2, 0, "Chocolate");  // Takes away 0 items, adds "Chocolate"
+      console.log(arr);               // ["Apple", "Banana", "Chocolate", 5.4, true]
+      arr.splice(3, 2, "Durian", "Eggplant") // Takes away 2 items startring from arr[3], adds "Durian" and "Eggplant"
+      console.log(arr);               // ["Apple", "Banana", "Chocolate", "Durian", "Eggplant"]
+
+      const items = [
+        { name: "10pc Chicken Nuggets", location: "Burger King", price: "$1.99" },
+        { name: "Whopper", location: "Burger King", price: "$4.19" },
+        { name: "Original Burger Meal Combo", location: "Harvey's", price: "$5.99" },
+        { name: "Chicken Burger Meal Combo", location: "Harvey's", price: "$7.99" }
+      ];
+
+      // filter
+      const bk = items.filter(item => item.location === "Burger King");
+      for (var i = 0; i < bk.length; i++) {
+        console.log(bk[i]);
+      }
+      // map
+      const menu = items.map(item => item.name + " @ " + item.price + ". Sold at " + item.location);
+      for (var i = 0; i < menu.length; i++) {
+        console.log(menu[i] );
+      }
+      //reduce
+      const totalCost = items.reduce((priceSoFar, item) => {
+        const item_price = parseFloat(item.price.slice(1));
+        priceSoFar += item_price;
+        return priceSoFar;
+      }, 0);
+      console.log(totalCost.toFixed(2));  //toFixed returns string to 2 decimal places
+
+
+      // INTERACTING WITH THE DOM (DOCUMENT OBJECT MODEL)
+      const text = document.querySelector('p');
+      function output(e) {
+        console.log(e);
+        text.innerHTML = "WHY DID YOU CLICK THE BUTTON!!!"
+        // innerHTML = sets the HTML content of an element
+      }
+      const buttons = document.querySelectorAll('button');
+      console.log(buttons);
+      const goodButton = document.querySelector('#good');
+      const badButton = document.querySelector('#bad');
+      console.log(goodButton);
+      goodButton.addEventListener('click', e => {
+        console.log(e);
+        alert("Hello World!");
+        text.innerHTML = "Hello World!"
+      });
+      badButton.addEventListener('click', output);
+
+      const submitBtn = document.querySelector('#submit-btn');
+      submitBtn.addEventListener('click', function(e) {
+        e.preventDefault();  // IMPORTANT -> prevents submit button from reloading page
+        const hi = document.querySelector('#hi');
+        const lo = document.querySelector('#lo');
+        const randomNum = random(lo.value, hi.value);
+        const h2 = document.querySelector('#num');
+        h2.innerHTML = randomNum;
+      });
+    </script>
+  </body>
+</html>
