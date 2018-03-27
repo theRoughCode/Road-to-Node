@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
 const routes = require('./routes'); // Import routes module we created
-const path = require('path');   // import path module
+const path = require('path');   // Import path module
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
+const mongoose = require('mongoose');  // Middleware for MongoDB (database)
 const cors = require('cors');
 
 // Define port to listen to
@@ -12,7 +12,7 @@ const PORT = 8080;
 // allows us to parse bodies of requests
 app.use(bodyParser.json());
 // allows for rich objects and arrays to be encoded into URL-encoded format
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Allows other websites to fetch our data
 app.use(cors({ origin: '*' }));

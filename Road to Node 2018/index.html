@@ -16,50 +16,78 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-        </tr>
       </tbody>
     </table>
   </body>
   <script type="text/javascript">
     const tableBody = document.querySelector('tbody');
     var count = 0;
-    fetch('http://localhost:8080/users/list')
-      .then(res => res.json())
-      .then(users => users.map(user => {
-          const { first, last, handle } = user;
-          const row = document.createElement('tr');
-          const index = document.createElement('th');
-          const firstName = document.createElement('td');
-          const lastName = document.createElement('td');
-          const userHandle = document.createElement('td');
 
-          index.innerHTML = ++count;
-          firstName.innerHTML = first;
-          lastName.innerHTML = last;
-          userHandle.innerHTML = `@${handle}`;
-          row.appendChild(index);
-          row.appendChild(firstName);
-          row.appendChild(lastName);
-          row.appendChild(userHandle);
-          tableBody.appendChild(row);
-        })
-      );
+    const row1 = document.createElement('tr');
+    const index1 = document.createElement('th');
+    const firstName1 = document.createElement('td');
+    const lastName1 = document.createElement('td');
+    const userHandle1 = document.createElement('td');
+    index1.innerHTML = ++count;
+    firstName1.innerHTML = "Donald";
+    lastName1.innerHTML = "Trump";
+    userHandle1.innerHTML = "@realDonaldTrump";
+    row1.appendChild(index1);
+    row1.appendChild(firstName1);
+    row1.appendChild(lastName1);
+    row1.appendChild(userHandle1);
+    tableBody.appendChild(row1);
+
+    const row2 = document.createElement('tr');
+    const index2 = document.createElement('th');
+    const firstName2 = document.createElement('td');
+    const lastName2 = document.createElement('td');
+    const userHandle2 = document.createElement('td');
+    index2.innerHTML = ++count;
+    firstName2.innerHTML = "Barack";
+    lastName2.innerHTML = "Obama";
+    userHandle2.innerHTML = "@BarackObama";
+    row2.appendChild(index2);
+    row2.appendChild(firstName2);
+    row2.appendChild(lastName2);
+    row2.appendChild(userHandle2);
+    tableBody.appendChild(row2);
+
+    const row3 = document.createElement('tr');
+    const index3 = document.createElement('th');
+    const firstName3 = document.createElement('td');
+    const lastName3 = document.createElement('td');
+    const userHandle3 = document.createElement('td');
+    index3.innerHTML = ++count;
+    firstName3.innerHTML = "Feridun";
+    lastName3.innerHTML = "Hamdullahpur";
+    userHandle3.innerHTML = "@UWaterlooPres";
+    row3.appendChild(index3);
+    row3.appendChild(firstName3);
+    row3.appendChild(lastName3);
+    row3.appendChild(userHandle3);
+    tableBody.appendChild(row3);
+
+    // fetch('http://localhost:8080/users/list')
+    //   .then(res => res.json())
+    //   .then(users => users.map(user => {
+    //       const { first, last, handle } = user;
+    //       const row = document.createElement('tr');
+    //       const index = document.createElement('th');
+    //       const firstName = document.createElement('td');
+    //       const lastName = document.createElement('td');
+    //       const userHandle = document.createElement('td');
+    //
+    //       index.innerHTML = ++count;
+    //       firstName.innerHTML = first;
+    //       lastName.innerHTML = last;
+    //       userHandle.innerHTML = `@${handle}`;
+    //       row.appendChild(index);
+    //       row.appendChild(firstName);
+    //       row.appendChild(lastName);
+    //       row.appendChild(userHandle);
+    //       tableBody.appendChild(row);
+    //     })
+    //   );
   </script>
 </html>
