@@ -28,5 +28,5 @@ Goals
  - Create a basic HTML template with Handlebars
  - Show how node connects express and Handlebars (through view engine)
  - GET/POST params 
- - Introduce Postmaster
+ - Introduce Postman
 

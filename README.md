@@ -52,4 +52,4 @@ Goals:
 - Introduce localhost
 - Create a basic HTML template with Handlebars
 - Show how node connects express and Handlebars (through view engine)
-- Introduce HTTP requests (POST, GET) with Postmaster
+- Introduce HTTP requests (POST, GET) with Postman

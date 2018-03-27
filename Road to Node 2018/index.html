@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <table class="table table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+  <script type="text/javascript">
+    const tableBody = document.querySelector('tbody');
+    var count = 0;
+    fetch('http://localhost:8080/users/list')
+      .then(res => res.json())
+      .then(users => users.map(user => {
+          const { first, last, handle } = user;
+          const row = document.createElement('tr');
+          const index = document.createElement('th');
+          const firstName = document.createElement('td');
+          const lastName = document.createElement('td');
+          const userHandle = document.createElement('td');
+
+          index.innerHTML = ++count;
+          firstName.innerHTML = first;
+          lastName.innerHTML = last;
+          userHandle.innerHTML = `@${handle}`;
+          row.appendChild(index);
+          row.appendChild(firstName);
+          row.appendChild(lastName);
+          row.appendChild(userHandle);
+          tableBody.appendChild(row);
+        })
+      );
+  </script>
+</html>
