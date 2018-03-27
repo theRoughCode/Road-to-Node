@@ -53,3 +53,16 @@ Goals:
 - Create a basic HTML template with Handlebars
 - Show how node connects express and Handlebars (through view engine)
 - Introduce HTTP requests (POST, GET) with Postman
+
+### Workshop #4: Road to Node 2018
+Time: Tues, March 26 2018 @  7pm - 8.30pm (1.5hr)
+
+Location: STC 0010
+
+Goals:
+- Brief introduction to JavaScript
+- Introduce Node.js
+- Integrate express to setup a local server
+- Introduce routing
+- Introduce localhost
+- Introduce HTTP requests (POST, GET, DELETE) with Postman
