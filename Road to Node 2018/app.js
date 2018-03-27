@@ -7,7 +7,7 @@ const mongoose = require('mongoose');  // Middleware for MongoDB (database)
 const cors = require('cors');
 
 // Define port to listen to
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 // allows us to parse bodies of requests
 app.use(bodyParser.json());
